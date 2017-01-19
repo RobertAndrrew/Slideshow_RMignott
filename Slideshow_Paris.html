@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Slideshow Assignment_RM
+	</title>
+	<style type="text/css">
+		body {
+				background-image: url("images/image_bg.jpg");
+			}
+		h1 {
+			font-family: sans-serif;
+			font-size: 100px;
+			font-color: black;
+			}
+	</style>
+</head>
+
+<body>
+<h1>PARIS</h1>
+<div>
+<button class="button" id="back-button" onclick="plusDivs(-1)">&#10094;</button>
+<button class="button" id="fwd-button" onclick="plusDivs(+1)">&#10095;</button>
+
+	<img class="ParisSlides" src="images/image1.jpg">
+	<img class="ParisSlides" src="images/image2.jpg">
+	<img class="ParisSlides" src="images/image3.jpg">
+	<img class="ParisSlides" src="imges/image4.jpg">
+	<img class="ParisSlides" src="images/image5.jpg">
+	<img class="ParisSlides" src="images/image6.jpg">
+	<img class="ParisSlides" src="images/image7.jpg">
+	<img class="ParisSlides" src="images/image8.jpg">
+	<img class="ParisSlides" src="images/image9.jpg">
+</div>
+
+<script type="text/javascript">
+var slideIndex = 1;
+showDivs(slideIndex);
+
+function plusDivs(n) {
+	showDivs(slideIndex +=n);
+	}	
+function showDivs(n) {
+var i;
+//Not sure why the slides re displayng the way do.  Slides should not display until clicked. 
+var x= document.getElementsByClassName('ParisSlides');
+if (n>x.length;) {slideIndex=1}
+if (n<1) {slideIndex = x.length}
+for (var i = 0; i < x.length; i++) {
+	x[i].style.display ="none";
+}
+x[slideIndex-1].style.display = "block";
+}
+
+//I CAN'T GET THIS TO WORK!!!  I need more time to figure it out.
+</script>
+
+</body>
+</html>
